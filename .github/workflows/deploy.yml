@@ -34,5 +34,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps  # Essayer FTPS si FTP standard ne fonctionne pas
           local-dir: ./dist/
-          server-dir: /public_html/
+          server-dir: /  # Upload à la racine du compte FTP (qui EST public_html pour Hostinger)
           dangerous-clean-slate: false
