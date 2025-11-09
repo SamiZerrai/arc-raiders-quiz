@@ -1,0 +1,60 @@
+export const translations = {
+  fr: {
+    title: "🤖 Arc Raiders - Quiz des Sons ARC",
+    scoreLabel: "Score:",
+    accuracyLabel: "Précision:",
+    instructions: "Écoutez le bruit et devinez le robot ARC",
+    playButton: "🎵 Écouter le son",
+    playingButton: "🔊 Lecture en cours...",
+    selectLabel: "Sélectionnez le robot:",
+    selectPlaceholder: "-- Choisir un robot --",
+    validateButton: "Valider",
+    selectRobotWarning: "Veuillez sélectionner un robot!",
+    correctFeedback: "✓ Correct! Bravo!",
+    incorrectFeedback: "✗ Incorrect! Il vous reste {remaining} tentative(s)",
+    maxAttemptsReached: "✗ Échec! C'était {robot}",
+    quizCompletedTitle: "Quiz Terminé!",
+    quizCompletedMessage: "Vous avez identifié tous les robots ARC!",
+    finalScore: "Score Final:",
+    restartButton: "Recommencer",
+    continueButton: "Continuer",
+    howToPlayTitle: "Comment jouer:",
+    howToPlaySteps: [
+      'Cliquez sur le bouton "Écouter le son" pour entendre le bruit du robot',
+      "Sélectionnez le robot correspondant dans la liste déroulante",
+      'Cliquez sur "Valider" pour vérifier votre réponse',
+      "Essayez d'obtenir le meilleur score possible!"
+    ],
+    note: "Note: Pour l'instant, l'application n'a pas les vrais sons des robots ARC. Vous devrez ajouter les fichiers audio dans le dossier",
+    languageLabel: "Langue:"
+  },
+  en: {
+    title: "🤖 Arc Raiders - ARC Sounds Quiz",
+    scoreLabel: "Score:",
+    accuracyLabel: "Accuracy:",
+    instructions: "Listen to the sound and guess the ARC robot",
+    playButton: "🎵 Play Sound",
+    playingButton: "🔊 Playing...",
+    selectLabel: "Select the robot:",
+    selectPlaceholder: "-- Choose a robot --",
+    validateButton: "Submit",
+    selectRobotWarning: "Please select a robot!",
+    correctFeedback: "✓ Correct! Well done!",
+    incorrectFeedback: "✗ Incorrect! {remaining} attempt(s) remaining",
+    maxAttemptsReached: "✗ Failed! It was {robot}",
+    quizCompletedTitle: "Quiz Completed!",
+    quizCompletedMessage: "You identified all ARC robots!",
+    finalScore: "Final Score:",
+    restartButton: "Restart",
+    continueButton: "Continue",
+    howToPlayTitle: "How to play:",
+    howToPlaySteps: [
+      'Click the "Play Sound" button to hear the robot\'s noise',
+      "Select the corresponding robot from the dropdown list",
+      'Click "Submit" to check your answer',
+      "Try to get the best score possible!"
+    ],
+    note: "Note: Currently, the app doesn't have the real ARC robot sounds. You will need to add the audio files to the folder",
+    languageLabel: "Language:"
+  }
+};
