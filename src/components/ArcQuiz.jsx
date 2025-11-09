@@ -2,11 +2,16 @@ import { useState, useRef, useEffect } from 'react';
 import './ArcQuiz.css';
 import { translations } from '../translations';
 
-const ARC_ROBOTS = [
+const ALL_ROBOTS = [
   'Tick', 'Pop', 'Fireball', 'Surveyor', 'Turret', 'Sentinel',
   'Snitch', 'Wasp', 'Hornet', 'Rocketeer', 'Leaper', 'Bastion',
   'Spotter', 'Bombardier', 'The Queen', 'Harvester', 'ARC Probe'
 ];
+
+// Mode test: si VITE_TEST_MODE=true, utilise uniquement ARC Probe
+const TEST_ROBOTS = ['ARC Probe'];
+const IS_TEST_MODE = import.meta.env.VITE_TEST_MODE === 'true';
+const ARC_ROBOTS = IS_TEST_MODE ? TEST_ROBOTS : ALL_ROBOTS;
 
 function ArcQuiz() {
   const [currentRobot, setCurrentRobot] = useState('');
@@ -63,13 +68,16 @@ function ArcQuiz() {
   };
 
   const playSound = () => {
-    // Pour l'instant, on utilise un son de notification du navigateur
-    // Vous pourrez remplacer ceci par les vrais sons des robots
     if (audioRef.current) {
+      // Recharger la source audio pour s'assurer que le bon fichier est chargé
+      audioRef.current.load();
       audioRef.current.currentTime = 0;
       setIsPlaying(true);
       audioRef.current.play()
-        .catch(err => console.error('Erreur de lecture audio:', err));
+        .catch(err => {
+          console.error('Erreur de lecture audio:', err);
+          setIsPlaying(false);
+        });
     } else {
       // Feedback visuel si pas d'audio
       setIsPlaying(true);
