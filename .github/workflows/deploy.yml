@@ -3,7 +3,8 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - main  # Change to 'master' if your default branch is master
+      - master  # Déploiement automatique sur push
+  workflow_dispatch:  # Permet le déclenchement manuel
 
 jobs:
   build-and-deploy:
