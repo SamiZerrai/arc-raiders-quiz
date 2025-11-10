@@ -1,6 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import './ArcQuiz.css';
 import { translations } from '../translations';
+import Header from './Header';
+import ScoreBoard from './ScoreBoard';
+import QuizQuestion from './QuizQuestion';
+import RobotReveal from './RobotReveal';
+import QuizComplete from './QuizComplete';
+import Footer from './Footer';
 
 const ALL_ROBOTS = [
   'Tick', 'Pop', 'Fireball', 'Surveyor', 'Turret', 'Sentinel',
@@ -128,111 +134,60 @@ function ArcQuiz() {
 
   return (
     <div className="arc-quiz-container">
-      <div className="header-container">
-        <h1>{t.title}</h1>
-        <div className="language-selector">
-          <span className="language-label">{t.languageLabel}</span>
-          <button className="language-button" onClick={toggleLanguage}>
-            {language === 'fr' ? '🇬🇧 EN' : '🇫🇷 FR'}
-          </button>
-        </div>
-      </div>
+      <Header
+        title={t.title}
+        language={language}
+        onLanguageToggle={toggleLanguage}
+      />
 
-      <div className="score-board">
-        <div className="score-item">
-          <span className="label">{t.scoreLabel}</span>
-          <span className="value">{score}/{attempts}</span>
-        </div>
-      </div>
+      <ScoreBoard
+        score={score}
+        attempts={attempts}
+        label={t.scoreLabel}
+      />
 
       {quizCompleted ? (
-        <div className="quiz-completed">
-          <h2>{t.quizCompletedTitle}</h2>
-          <p>{t.quizCompletedMessage}</p>
-          <div className="final-score">
-            <span className="label">{t.finalScore}</span>
-            <span className="value">{score}/{ARC_ROBOTS.length}</span>
-          </div>
-          <button className="restart-button" onClick={resetQuiz}>
-            {t.restartButton}
-          </button>
-        </div>
+        <QuizComplete
+          title={t.quizCompletedTitle}
+          message={t.quizCompletedMessage}
+          finalScoreLabel={t.finalScore}
+          score={score}
+          total={ARC_ROBOTS.length}
+          restartButton={t.restartButton}
+          onRestart={resetQuiz}
+          language={language}
+        />
       ) : (
         <div className="quiz-section">
           {showImage && revealedRobot ? (
-            <div className="robot-reveal-full">
-              <h2 className="robot-name">{revealedRobot}</h2>
-              <img
-                src={`/images/${revealedRobot}.webp`}
-                alt={revealedRobot}
-                className="robot-image-full"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
-              />
-              <div className="image-placeholder-full" style={{display: 'none'}}>
-                <p>{revealedRobot}</p>
-                <small>Image non disponible</small>
-              </div>
-              <button className="continue-button" onClick={handleContinue}>
-                {t.continueButton}
-              </button>
-            </div>
+            <RobotReveal
+              robotName={revealedRobot}
+              continueButton={t.continueButton}
+              onContinue={handleContinue}
+            />
           ) : (
-            <>
-              <h2>{t.instructions}</h2>
-
-              <button
-                className={`play-button ${isPlaying ? 'playing' : ''}`}
-                onClick={playSound}
-                disabled={isPlaying}
-              >
-                {isPlaying ? t.playingButton : t.playButton}
-              </button>
-
-              {/* Audio element */}
-              <audio
-                ref={audioRef}
-                onEnded={handleAudioEnded}
-              >
-                <source src={`/sounds/${currentRobot}.mp3`} type="audio/mpeg" />
-              </audio>
-
-              <div className="selection-section">
-                <label htmlFor="robot-select">{t.selectLabel}</label>
-                <select
-                  id="robot-select"
-                  value={selectedRobot}
-                  onChange={(e) => setSelectedRobot(e.target.value)}
-                  className="robot-select"
-                >
-                  <option value="">{t.selectPlaceholder}</option>
-                  {ARC_ROBOTS.map((robot) => (
-                    <option key={robot} value={robot}>
-                      {robot}
-                    </option>
-                  ))}
-                </select>
-
-                <button
-                  className="submit-button"
-                  onClick={handleSubmit}
-                  disabled={!selectedRobot}
-                >
-                  {t.validateButton}
-                </button>
-              </div>
-
-              {feedback && (
-                <div className={`feedback ${feedback.includes('✓') ? 'correct' : 'incorrect'}`}>
-                  {feedback}
-                </div>
-              )}
-            </>
+            <QuizQuestion
+              instructions={t.instructions}
+              playButton={{ default: t.playButton, playing: t.playingButton }}
+              isPlaying={isPlaying}
+              onPlay={playSound}
+              audioRef={audioRef}
+              currentRobot={currentRobot}
+              selectLabel={t.selectLabel}
+              selectPlaceholder={t.selectPlaceholder}
+              robots={ARC_ROBOTS}
+              selectedRobot={selectedRobot}
+              onSelectChange={setSelectedRobot}
+              validateButton={t.validateButton}
+              onSubmit={handleSubmit}
+              feedback={feedback}
+              onAudioEnd={handleAudioEnded}
+            />
           )}
         </div>
       )}
+
+      <Footer />
     </div>
   );
 }

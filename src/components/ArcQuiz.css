@@ -1,8 +1,8 @@
 .arc-quiz-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .header-container {
@@ -14,14 +14,19 @@
   gap: 1rem;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 h1 {
   text-align: center;
   color: #FFFFFF;
   margin: 0;
-  font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   flex: 1;
   min-width: 250px;
 }
@@ -29,37 +34,37 @@ h1 {
 .language-selector {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  border: 2px solid #00FF88;
+  gap: 0.75rem;
+  background: rgba(45, 50, 60, 0.8);
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 .language-label {
-  font-size: 0.9rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
 }
 
 .language-button {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   font-size: 0.9rem;
-  font-weight: 900;
-  color: #0A0E1A;
-  background: #00FF88;
-  border: none;
-  border-radius: 4px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: rgba(0, 217, 255, 0.15);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
 }
 
 .language-button:hover {
-  background: #00DD77;
-  transform: translateY(-2px);
+  background: rgba(0, 217, 255, 0.25);
+  border-color: rgba(0, 217, 255, 0.5);
+  transform: translateY(-1px);
 }
 
 .language-button:active {
@@ -71,70 +76,73 @@ h1 {
   justify-content: center;
   gap: 3rem;
   margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
-  border: 2px solid #FFD700;
+  padding: 1.5rem 2rem;
+  background: rgba(45, 50, 60, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 .score-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #FFD700;
+  color: #FFFFFF;
 }
 
 .score-item .label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
   margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .score-item .value {
   font-size: 2.5rem;
-  font-weight: 900;
-  color: #00FF88;
+  font-weight: 700;
+  color: #00D9FF;
 }
 
 .quiz-section {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 4px;
-  border: 2px solid #00FF88;
+  background: rgba(45, 50, 60, 0.6);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .quiz-section h2 {
   text-align: center;
   color: #FFFFFF;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .play-button {
   display: block;
-  margin: 0 auto 2rem;
-  padding: 1.5rem 3rem;
-  font-size: 1.2rem;
-  font-weight: 900;
-  color: #0A0E1A;
-  background: #FFD700;
-  border: none;
-  border-radius: 4px;
+  margin: 0 auto 2.5rem;
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.25), rgba(0, 217, 255, 0.15));
+  border: 1.5px solid rgba(0, 217, 255, 0.4);
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .play-button:hover:not(:disabled) {
-  background: #FFC700;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.35), rgba(0, 217, 255, 0.25));
+  border-color: rgba(0, 217, 255, 0.6);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 217, 255, 0.3);
 }
 
 .play-button:active:not(:disabled) {
@@ -142,7 +150,8 @@ h1 {
 }
 
 .play-button.playing {
-  background: #FF4444;
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.3), rgba(255, 68, 68, 0.2));
+  border-color: rgba(255, 68, 68, 0.5);
   color: #FFFFFF;
   animation: pulse 1s infinite;
 }
@@ -178,27 +187,29 @@ h1 {
 
 .robot-select {
   width: 100%;
-  max-width: 400px;
-  padding: 1rem;
+  max-width: 450px;
+  padding: 1rem 1.5rem;
   font-size: 1rem;
-  font-weight: 700;
-  border: 2px solid #00FF88;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background-color: rgba(30, 35, 45, 0.8);
   color: #FFFFFF;
   cursor: pointer;
   transition: all 0.2s ease;
-  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .robot-select:focus {
   outline: none;
-  border-color: #FFD700;
-  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 217, 255, 0.5);
+  background-color: rgba(30, 35, 45, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.2);
 }
 
 .robot-select:hover {
-  border-color: #FFD700;
+  border-color: rgba(0, 217, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .robot-select option {
@@ -208,52 +219,54 @@ h1 {
 }
 
 .submit-button {
-  padding: 1rem 3rem;
-  font-size: 1.1rem;
-  font-weight: 900;
-  color: #0A0E1A;
-  background: #00FF88;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: #00D9FF;
   border: none;
-  border-radius: 4px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(0, 217, 255, 0.3);
 }
 
 .submit-button:hover:not(:disabled) {
-  background: #00DD77;
+  background: #00B8DD;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 217, 255, 0.4);
 }
 
 .submit-button:disabled {
-  background: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.4);
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .feedback {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  border-radius: 4px;
+  margin-top: 2rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 600;
   animation: slideIn 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .feedback.correct {
-  background-color: rgba(0, 255, 136, 0.2);
+  background-color: rgba(0, 255, 136, 0.12);
   color: #00FF88;
-  border: 2px solid #00FF88;
+  border: 1px solid rgba(0, 255, 136, 0.3);
 }
 
 .feedback.incorrect {
-  background-color: rgba(255, 68, 68, 0.2);
+  background-color: rgba(255, 68, 68, 0.12);
   color: #FF4444;
-  border: 2px solid #FF4444;
+  border: 1px solid rgba(255, 68, 68, 0.3);
 }
 
 .robot-reveal {
@@ -266,18 +279,17 @@ h1 {
   max-width: 400px;
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 0;
   border: 3px solid #00FF88;
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
   background: rgba(0, 0, 0, 0.5);
 }
 
 .image-placeholder {
   padding: 2rem;
   background: rgba(255, 255, 255, 0.05);
-  border: 2px dashed #FFD700;
-  border-radius: 4px;
-  color: #FFD700;
+  border: 2px dashed #00D9FF;
+  border-radius: 0;
+  color: #00D9FF;
 }
 
 .image-placeholder p {
@@ -290,7 +302,7 @@ h1 {
 
 .image-placeholder small {
   font-size: 0.9rem;
-  color: rgba(255, 215, 0, 0.7);
+  color: rgba(0, 217, 255, 0.7);
 }
 
 .robot-reveal-full {
@@ -306,7 +318,7 @@ h1 {
 .robot-name {
   font-size: 3rem;
   font-weight: 900;
-  color: #00FF88;
+  color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 1.5rem;
@@ -318,11 +330,11 @@ h1 {
   max-width: 500px;
   width: 100%;
   height: auto;
-  border-radius: 4px;
-  border: 4px solid #00FF88;
-  box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 217, 255, 0.3);
   background: rgba(0, 0, 0, 0.5);
   margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .image-placeholder-full {
@@ -332,9 +344,9 @@ h1 {
   justify-content: center;
   padding: 3rem;
   background: rgba(255, 255, 255, 0.05);
-  border: 3px dashed #FFD700;
-  border-radius: 4px;
-  color: #FFD700;
+  border: 3px dashed #00D9FF;
+  border-radius: 0;
+  color: #00D9FF;
   min-height: 300px;
   margin-bottom: 2rem;
 }
@@ -349,26 +361,27 @@ h1 {
 
 .image-placeholder-full small {
   font-size: 1rem;
-  color: rgba(255, 215, 0, 0.7);
+  color: rgba(0, 217, 255, 0.7);
 }
 
 .continue-button {
-  padding: 1.5rem 5rem;
-  font-size: 1.3rem;
-  font-weight: 900;
-  color: #0A0E1A;
-  background: #00FF88;
+  padding: 1.2rem 4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: #00D9FF;
   border: none;
-  border-radius: 4px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(0, 217, 255, 0.3);
 }
 
 .continue-button:hover {
-  background: #00DD77;
+  background: #00B8DD;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 217, 255, 0.4);
 }
 
 .continue-button:active {
@@ -376,28 +389,28 @@ h1 {
 }
 
 .quiz-completed {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(45, 50, 60, 0.6);
   padding: 3rem 2rem;
-  border-radius: 4px;
-  border: 3px solid #00FF88;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
   animation: slideIn 0.5s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
 .quiz-completed h2 {
-  color: #00FF88;
-  font-size: 2.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   margin-bottom: 1rem;
 }
 
 .quiz-completed p {
-  color: #FFFFFF;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
 }
 
 .quiz-completed .final-score {
@@ -406,47 +419,61 @@ h1 {
   align-items: center;
   margin-bottom: 2rem;
   padding: 2rem;
-  background: rgba(255, 215, 0, 0.1);
-  border-radius: 4px;
-  border: 2px solid #FFD700;
+  background: rgba(0, 217, 255, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 217, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .quiz-completed .final-score .label {
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #FFD700;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 1rem;
 }
 
 .quiz-completed .final-score .value {
   font-size: 3rem;
-  font-weight: 900;
-  color: #00FF88;
+  font-weight: 700;
+  color: #00D9FF;
 }
 
-.restart-button {
-  padding: 1.5rem 4rem;
-  font-size: 1.3rem;
-  font-weight: 900;
-  color: #0A0E1A;
-  background: #FFD700;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+.rank-display {
+  margin: 1.5rem 0 2rem 0;
+  padding: 1.2rem 2rem;
+  background: rgba(0, 217, 255, 0.06);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.rank-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00D9FF;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
-.restart-button:hover {
-  background: #FFC700;
-  transform: translateY(-2px);
+.coffee-button-header {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, rgba(255, 95, 95, 0.2), rgba(255, 129, 63, 0.2));
+  border: 1px solid rgba(255, 95, 95, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  letter-spacing: 0.3px;
 }
 
-.restart-button:active {
-  transform: translateY(0);
+.coffee-button-header:hover {
+  background: linear-gradient(135deg, rgba(255, 95, 95, 0.3), rgba(255, 129, 63, 0.3));
+  border-color: rgba(255, 95, 95, 0.6);
+  transform: translateY(-1px);
 }
 
 @keyframes slideIn {
@@ -463,12 +490,12 @@ h1 {
 .instructions {
   background: rgba(255, 255, 255, 0.05);
   padding: 1.5rem;
-  border-radius: 4px;
+  border-radius: 0;
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .instructions h3 {
-  color: #FFD700;
+  color: #00D9FF;
   margin-bottom: 1rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -489,20 +516,45 @@ h1 {
 .instructions .note {
   margin-top: 1rem;
   padding: 1rem;
-  background: rgba(255, 215, 0, 0.1);
-  border-radius: 4px;
-  color: #FFD700;
+  background: rgba(0, 217, 255, 0.1);
+  border-radius: 0;
+  color: #00D9FF;
   font-size: 0.9rem;
-  border: 1px solid #FFD700;
+  border: 1px solid #00D9FF;
 }
 
 .instructions code {
-  background: rgba(0, 255, 136, 0.2);
+  background: rgba(0, 217, 255, 0.2);
   padding: 0.2rem 0.4rem;
-  border-radius: 4px;
+  border-radius: 0;
   font-family: 'Courier New', monospace;
-  color: #00FF88;
+  color: #00D9FF;
   font-weight: 700;
+}
+
+.app-footer {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(20, 25, 35, 0.5);
+  border-radius: 16px;
+}
+
+.footer-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin: 0 auto 0.75rem;
+  max-width: 700px;
+  font-weight: 400;
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -526,5 +578,9 @@ h1 {
   .play-button {
     padding: 1rem 2rem;
     font-size: 1rem;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
   }
 }

@@ -146,9 +146,11 @@ Ce projet est configuré pour un déploiement automatique sur Hostinger via GitH
 
 Arc Raiders est un jeu développé par Embark Studios. Les ARC sont des machines mortelles qui tombent du ciel, avec des tailles variant de petites unités discrètes à des béhémoths multi-pattes, chacune ayant des patterns d'attaque distincts et des faiblesses stratégiques.
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est à but éducatif et de divertissement. Arc Raiders et tous les noms de robots associés sont la propriété d'Embark Studios.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+All game content, including but not limited to game mechanics, items, names, and imagery, is copyright © Embark Studios AB. This repository is a community resource and is not affiliated with or endorsed by Embark Studios AB.
 
 ## 🤝 Contribution
 
